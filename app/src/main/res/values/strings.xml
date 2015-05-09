@@ -14,4 +14,7 @@
         <item>True Detective</item>
         <item>House of Cards</item>
     </string-array>
+    <string name="title_activity_content">ContentActivity</string>
+
+    <string name="ContentFragment_title"></string>
 </resources>

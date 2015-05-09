@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -27,8 +25,6 @@ import android.widget.Toast;
 
 
 public class MenuFragment extends Fragment implements AdapterView.OnItemClickListener{
-
-    private ListView seriesListView;
 
     public MenuFragment(){
 
@@ -52,7 +48,7 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
         //Toast.makeText(getActivity(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
 
         try {
-            ((OnItemSelectedListener) getActivity()).onItemPicked(view);
+            ((SeriesSelectorInterface) getActivity()).onItemPicked(view);
         }catch (ClassCastException cce){}
 
     }

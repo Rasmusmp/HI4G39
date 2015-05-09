@@ -6,6 +6,7 @@ import android.view.View;
 /**
  * Created by Rasmus on 09-05-2015.
  */
-public interface OnItemSelectedListener {
+public interface SeriesSelectorInterface {
     public void onItemPicked(View view);
+    public void onItemReceived(String string);
 }

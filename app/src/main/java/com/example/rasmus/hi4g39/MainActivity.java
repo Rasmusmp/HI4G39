@@ -3,11 +3,9 @@ package com.example.rasmus.hi4g39;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 
 /*
@@ -15,8 +13,11 @@ import android.widget.Toast;
 *
 */
 
-public class MainActivity extends FragmentActivity implements OnItemSelectedListener{
+public class MainActivity extends FragmentActivity implements SeriesSelectorInterface {
 
+    String msg = "Rasmus Logging ";
+
+    private String item;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,11 @@ public class MainActivity extends FragmentActivity implements OnItemSelectedList
     public void onItemPicked(View view){
         //Do something with list item clicked
         Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+
+
+        Intent itemIntent = new Intent(this, ContentActivity.class);
+        itemIntent.putExtra("item", ((TextView) view).getText());
+        startActivity(itemIntent);
     }
 
 
@@ -58,5 +64,8 @@ public class MainActivity extends FragmentActivity implements OnItemSelectedList
         super.onDestroy();
     }
 
+    @Override
+    public void onItemReceived(String string) {
 
+    }
 }
