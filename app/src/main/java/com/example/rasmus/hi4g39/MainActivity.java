@@ -15,13 +15,23 @@ import android.widget.Toast;
 *
 */
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends FragmentActivity implements OnItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    public void onItemPicked(View view){
+        //Do something with list item clicked
+        Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+    }
+
+
+
+
+
 
     @Override
     protected void onStart() {

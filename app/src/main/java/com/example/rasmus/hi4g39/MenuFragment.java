@@ -17,8 +17,12 @@ import android.widget.Toast;
  * Created by Rasmus on 09-05-2015.
  *
  * References:
- * listView: http://theopentutorials.com/tutorials/android/listview/android-create-listview-in-xml-and-populate-items-using-arrayadapter/
- * listView: http://www.vogella.com/tutorials/AndroidListView/article.html#listactivity
+ * listView:
+ * http://theopentutorials.com/tutorials/android/listview/android-create-listview-in-xml-and-populate-items-using-arrayadapter/
+ * http://www.vogella.com/tutorials/AndroidListView/article.html#listactivity
+ *
+ * Fragment -> Activity communication:
+ * http://simpledeveloper.com/how-to-communicate-between-fragments-and-activities/
  */
 
 
@@ -44,8 +48,13 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getActivity(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        //Toast.makeText(getActivity(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+
+        try {
+            ((OnItemSelectedListener) getActivity()).onItemPicked(view);
+        }catch (ClassCastException cce){}
 
     }
+
 }
