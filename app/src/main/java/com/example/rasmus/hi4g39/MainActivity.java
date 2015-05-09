@@ -22,17 +22,20 @@ public class MainActivity extends FragmentActivity implements AdapterView.OnItem
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        /*
         ListView seriesListView = (ListView) findViewById(R.id.series_listView);
         String[] series = getResources().getStringArray(R.array.series_array);
         seriesListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, series));
         seriesListView.setOnItemClickListener(this);
+        */
     }
+
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
-                Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), ((TextView) view).getText(), Toast.LENGTH_SHORT).show();
     }
+
 
     @Override
     protected void onStart() {
