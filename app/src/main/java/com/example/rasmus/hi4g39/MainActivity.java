@@ -8,6 +8,7 @@ import android.widget.Toast;
 import android.content.Intent;
 
 // NIKO ER INDE
+// .. tror jeg
 
 /*
 * listView ref: http://theopentutorials.com/tutorials/android/listview/android-create-listview-in-xml-and-populate-items-using-arrayadapter/
