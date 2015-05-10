@@ -7,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
+// NIKO ER INDE
 
 /*
 * listView ref: http://theopentutorials.com/tutorials/android/listview/android-create-listview-in-xml-and-populate-items-using-arrayadapter/
