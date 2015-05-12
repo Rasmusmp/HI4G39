@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class ContentFragment extends Fragment implements SeriesSelectorInterface{
 
     String msg = "Rasmus Logging ";
-
+    View view;
     private String itemReceived;
 
     public ContentFragment() {
@@ -26,7 +26,7 @@ public class ContentFragment extends Fragment implements SeriesSelectorInterface
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_content, container, false);
+        view = inflater.inflate(R.layout.fragment_content, container, false);
 
        // TextView itemTitle = (TextView) view.findViewById(R.id.content_title);
         //itemTitle.setText(itemReceived);
@@ -43,15 +43,10 @@ public class ContentFragment extends Fragment implements SeriesSelectorInterface
         //Do something with string received
         itemReceived = string;
         Log.d(msg, "ContentFrag: item: " + itemReceived);
-        updateDescription(string);
-
+        TextView text=(TextView)view.findViewById(R.id.textViewA);
+        text.setText("Text");
     }
 
-    public void updateDescription(String s) {
-
-     tvId = s;
-
-    }
 
     @Override
     public void onItemPicked(View view) {
