@@ -13,6 +13,14 @@
         android:id="@+id/content_title" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textViewA"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/content_description" />

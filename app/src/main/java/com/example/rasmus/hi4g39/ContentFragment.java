@@ -28,9 +28,11 @@ public class ContentFragment extends Fragment implements SeriesSelectorInterface
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_content, container, false);
 
-        TextView itemTitle = (TextView) view.findViewById(R.id.content_title);
-        itemTitle.setText(itemReceived);
+       // TextView itemTitle = (TextView) view.findViewById(R.id.content_title);
+        //itemTitle.setText(itemReceived);
 
+        TextView tvId = (TextView)view.findViewById(R.id.textViewA);
+        tvId.setText("Information about " + itemReceived);
 
         return view;
     }
@@ -41,10 +43,15 @@ public class ContentFragment extends Fragment implements SeriesSelectorInterface
         //Do something with string received
         itemReceived = string;
         Log.d(msg, "ContentFrag: item: " + itemReceived);
-
+        updateDescription(string);
 
     }
 
+    public void updateDescription(String s) {
+
+     tvId = s;
+
+    }
 
     @Override
     public void onItemPicked(View view) {

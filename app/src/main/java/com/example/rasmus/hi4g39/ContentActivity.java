@@ -7,11 +7,15 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
-public class ContentActivity extends FragmentActivity {
+public class ContentActivity extends FragmentActivity implements SeriesSelectorInterface {
 
     String msg = "Rasmus Logging ";
+    private String itemReceived;
+
+
 
     private String item;
     @Override
@@ -30,4 +34,16 @@ public class ContentActivity extends FragmentActivity {
 
     }
 
+    @Override
+    public void onItemPicked(View view) {
+
+    }
+
+    @Override
+    public void onItemReceived(String string) {
+        //Do something with string received
+        itemReceived = string;
+        Log.d(msg, "ContentFrag: item: " + itemReceived);
+
+    }
 }
